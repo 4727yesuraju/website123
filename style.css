@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 2px;
+  transition:  .3s;
+  scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    position:fixed;
+    bottom:-25px;
+    left:50%;
+    padding:20px 20px 30px;
+    background: aqua;;
+    border-radius: 50%;
+    color:#000;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    cursor:pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.top.show{
+    display: flex;
+}
+
+.top i{
+    font-size:20px;
+}
+
+.header{
+    position: sticky;
+    left:0;
+    top:0;
+    z-index: 1000;
+    background: #fff;
+}
+.header.hide{
+    top:-100%;
+}
+a{
+    text-decoration:none;
+}
+
+.desktop{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px 0 ;
+}
+
+.desktop ul{
+    display:flex;
+    gap:15px;
+    list-style:none;   
+}
+
+.desktop ul li a:hover, .desktop .touch ul li:hover{
+    color:red;
+}
+
+.desktop .logo{
+    text-align: center;
+}
+
+.desktop .touch{
+    display: flex;
+    gap:25px;
+    align-items: center;
+}
+
+.touch button{
+    border-radius: 10px;
+    padding:10px;
+    border:1px;
+    color:#000;
+    background: aqua;
+}
+.touch button:hover{
+    color:aqua;
+    background-color: #000;
+}
+
+
+
+/* main */
+
+main .video{
+    width:100vw;
+
+}
+
+.video video{
+    width:100%;
+    left:0;
+    right:0;
+}
+
+.welcome{
+    display: flex; 
+    justify-content: space-between;
+    column-gap:20px;
+    padding:10px;
+    margin-top: 20px;;
+}
+
+.welcome .content{
+    width:40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    padding:20px;
+}
+
+.welcome .content h1{
+    font-size:80px;
+}
+
+.welcome .content p{
+    text-align: justify;
+}
+
+.welcome .content button{
+    width:200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding:10px;
+    border:1px;
+    color:aqua;
+    background-color: #000;
+    position: relative;
+    margin-inline: auto;
+}
+.welcome .content button:hover{
+    opacity:.8;
+}
+
+.welcome .content button i{
+    position: absolute;
+    right:20px;
+    font-size: 20px;
+}
+.welcome .content button:hover i{
+    right:10px;
+}
+
+.welcome .image{
+    width:50%;
+    border-radius:50%;
+}
+.welcome .img img{
+    width:100%;
+    border-radius:50% 0 0 0 ;
+    overflow:hidden;
+}
+
+.image .bars{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    margin-top:10px;
+}
+.image .bars span{
+    display: block;
+    width:30px;
+    height:2px;
+    background:#000;
+}
+
+.image .bars span.active{
+    background-color: red;
+}
+
+/* intro */
+.intro{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    padding-inline: 150px;;
+    margin-top:50px;
+}
+
+.intro .img{
+    width:90%;
+}
+
+.intro .img img{
+    width:80%;
+    border-radius:35% 35% 0 0;
+}
+
+.intro .content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.intro .content .info{
+    display: flex;
+    justify-content: flex-start;
+    gap:100px;
+    margin-top:20px;
+}
+.intro .content .info .items{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.intro .content .info .con{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.intro button{
+    align-self: center;
+    border-radius: 20px;
+    padding:10px;
+    border:1px;
+    color:aqua;
+    background-color: #000;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width:200px;
+    position: relative;
+}
+
+.intro button i{
+    font-size:20px;
+    position: absolute;
+    right:25px;
+}
+
+.intro button:hover i{
+    right:18px;
+}
+
+/* vimag */
+
+.vimg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.vimg h2{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 50px;;
+}
+
+.vimg button{
+    align-self: center;
+    border-radius: 20px;
+    padding:10px;
+    border:1px;
+    color:aqua;
+    background-color: #000;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width:200px;
+    position: relative;
+}
+
+.vimg button i{
+    font-size:20px;
+    position: absolute;
+    right:18px;
+}
+
+.vimg button:hover i{
+    right:12px;
+}
+
+/* scroll */
+
+.scroll{
+    margin-top:20px;
+    overflow-x:scroll;
+    display: flex;
+    gap:10px;
+    padding:10px;
+    height:70vh;
+}
+.scroll .img{
+    width:30vw;
+    height:100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.scroll .img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.scroll .img .content{
+    position: absolute;
+    display:hidden;
+    overflow:hidden;
+}
+
+.scroll .img .content button{
+    display:none;
+}
+
+.scroll .img .content .con{
+    display: none;
+}
+
+.scroll .img:hover .content{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: #000;
+    opacity:.7;
+    border-radius: 10px;;
+}
+
+.scroll .img:hover .content button{
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background: rgba(0,0,0,.7);
+    border:1px solid aqua ;
+    border-radius:20px;
+    color:aqua;
+    padding:10px;
+    padding-inline: 20px;;
+    font-family: bold;
+}
+
+.scroll .img:hover .content .con{
+    display:block;
+    position: absolute;
+    bottom:0;
+    color:aqua;
+    width:100%;
+    padding-left:30px;
+    margin:20px;
+}
+
+.formore{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+    padding-inline:150px;
+    margin-top:30px;
+}
+.formore h1{
+    display: flex;
+    flex-direction: column;
+    font-size:70px;
+}
+
+.formore p{
+    text-align:center;
+    padding:20px;
+}
+
+.great{
+    display: flex;
+    flex-direction: column;;
+    align-items: center;;
+    padding:50px 100px;
+    gap:20px;
+}
+.great h1{
+    display: flex;
+    flex-direction: column;;;
+    gap:10px;
+    font-size:50px;
+}
+.great p{
+    padding:10px 60px;
+    text-align:center;
+}
+
+.great button{
+    width:230px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding:10px;
+    border:1px;
+    color:aqua;
+    background-color: #000;
+    position: relative;
+    margin-inline: auto;
+}
+.great button:hover{
+    opacity:.8;
+}
+
+.great button i{
+    position: absolute;
+    right:15px;
+    font-size: 20px;
+}
+.great button:hover i{
+    right:10px;
+}
+
+/* rimg */
+
+.rimg{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding:60px;
+}
+.rimg .content .info{
+    padding:5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    margin:25px 5px;
+}
+.rimg .content .info h1{
+    position: relative;
+    text-align:center;
+    font-size: 50px;;
+}
+.rimg .content .info h1 img{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.rimg .content .info:hover h1 img{
+    display:block;
+}
+.rimg .content .info p{
+    text-align:center;
+    padding-inline:15px;
+    opacity:.7;
+}
+
+.rimg .content .info button{
+    border:2px solid red;
+    color:red;
+    padding:4px 10px;
+    width:160px;
+    background-color: transparent;
+    border-radius:10px;
+    display: flex;
+    align-items:center;
+   
+}
+
+.rimg .content .info button:hover i{
+    margin-left:10px;
+}
+
+.rimg .content .info button i{
+    font-size:20px;
+}
+.rimg .img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:250px 250px 0 0;
+}
+
+
+/* simg */
+
+.simg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.simg h1{
+    font-size:50px;
+}
+.simg p{
+    text-align:center;
+}
+
+.simg .imgs{
+    width:50%;
+    display: flex;
+    gap:20px;
+}
+
+.simg .imgs div span{
+    overflow:hidden;
+}
+
+.simg .imgs div img{
+    width:100%;
+    height:100%;
+    height:270px;
+}
+
+
+.simg .imgs div div{
+    background:#000;
+    color:aqua;
+    width:100%;
+    border-radius:15px;
+    padding:2px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.simg .imgs div{
+    width:50%;
+}
+.simg .imgs img{
+    width:50%;
+}
+
+.simg button{
+    border:1px solid red;
+    background:transparent;
+    padding:10px;
+    width:240px;
+    display: flex;
+    align-items:center;
+    text-align:center;
+    border-radius:20px;
+    color:red;
+}
+.simg button i{
+    font-size:25px;
+}
+
+.simg button:hover i{
+    margin-left:5px;
+}
+/* exp */
+
+.exp{
+    display: flex;
+    justify-content: center;
+}
+
+.exp .content{
+    text-align:center;
+    padding:50px 4px;
+}
+.exp .content h1{
+    display: flex;
+    flex-direction: column;;
+    font-size:50px;
+    margin-bottom:50px;
+}
+.exp .content div{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+.exp .content{
+    width:50%;
+}
+.exp .img{
+    width:50%;
+    padding:30px;
+}
+.exp .img img{
+    width:60%;
+}
+
+
+/* sign */
+
+.sign{
+    display: flex;
+    background-color: #000;
+    color:aqua;
+}
+.sign .details{
+    width:50%;
+    padding:50px;
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    gap:20px;
+    align-items:center;
+}
+
+.sign .details h2{
+    font-size:50px;
+}
+
+.sign .details div{
+    width:100%;
+    display: flex;
+    align-items: center;;
+    justify-content: space-around;
+}
+
+.sign .details div input{
+    width:60%;
+    height:30px;
+    padding:20px;
+    border-radius: 20px;;
+}
+
+.sign .details div button{
+    border:none;
+    background-color: rgba(255,255,255,.7);
+    width:200px;
+    padding:10px;
+    border-radius: 10px;;
+    color:black;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sign .details div button i{
+    font-size: 28px;;
+}
+
+.sign .details div button:hover {
+    color:aqua;
+    background: #000;
+}
+
+.sign .details div button:hover i{
+    margin-left:10px;
+}
+.sign .details p{
+    padding-inline: 50px;;
+}
+.sign .img{
+    width:50%;
+}
+.sign .img img{
+    width:100%;
+}
+/* footer */
+footer{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    background: aquamarine;
+    gap:10px;
+    row-gap: 40px;;
+    padding:30px;
+}
+ footer .content{
+    width:33%;
+ }
+
+ footer .action{
+    width:63%;
+    display: flex;
+    justify-content: space-around;
+ }
+
+ footer .content .spanline{
+    width:100%;
+    height:1px;
+    background: #000;
+    margin-top:20px;
+ }
+
+footer .action .about,
+footer .action .services,
+footer .action .events,
+footer .action .venues,
+footer .action .follow
+{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+footer .action div div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:2px;
+    cursor:pointer
+}
+
+footer .action div div:hover{
+    gap:10px;
+}
+footer .action div div i{
+    font-size:30px;
+}
+
+footer .action .follow span{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:10px;
+}
+ footer .us{
+    width: 45%;
+    opacity: 0.5;
+ }
+
+ footer .policy{
+    width:45%;
+ }
+
+ footer .line{
+    width:90%;
+    border:1px solid black;
+    border-radius: 1px;;
+    margin: auto;
+ }
+
+ footer .policy{
+    display: flex;
+    justify-content: end;
+    align-items:center;
+    gap:30px;
+    opacity: 0.5;
+ }
+ footer .policy .round{
+    border:1px solid black;
+    border-radius: 50%;
+    padding:10px;
+    width:60px;
+    height:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 5px;;
+    font-size: 7px;
+    font-weight: bold;
+ }
+
+ footer .policy .round .spanline{
+    width:90%;
+    height:1px;
+    background: #000;
+ }
+
+ footer .last{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ 
